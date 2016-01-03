@@ -1,0 +1,99 @@
+.top-buffer{
+    margin-top:10px;
+}
+
+.albumtable tr td:nth-child(2){
+    width: 150px;
+}
+
+.albumtable tr:nth-child(1) td{
+    border-top: none;
+}
+a.nodecoration{
+    text-decoration:none;
+}
+
+.logo {
+    padding: 10px;
+    margin-right: 10x;
+    font-size: 40px;
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+}
+
+.logoImage {
+    width: 40px;
+}
+
+.tagline {
+    padding: 10px;
+    margin-right: 10x;
+    font-size: 10px;
+    font-family: monospace;
+}
+
+.nav-wrapper {
+    margin-left: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#recordListWrapper {
+	width: 100%;
+	padding: 10px;
+}
+
+#recordListWrapper input {
+	width: 25%;
+}
+
+#recordListWrapper .record {
+	border: 1px solid gray;
+	padding: 5px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+#recordListWrapper .record .record-details {
+	margin-left: 60px;
+}
+
+.container.ng-enter {
+	-webkit-transition:0.5s linear all;
+	 -moz-transition:0.5s linear all;
+	 -o-transition:0.5s linear all;
+	 transition:0.5s linear all;
+   padding: 25px;
+	 opacity:0;
+}
+
+.container.ng-enter-active {
+	 opacity:1;
+}
+
+.record.ng-leave {
+	-webkit-transition:0.5s linear all;
+	 -moz-transition:0.5s linear all;
+	 -o-transition:0.5s linear all;
+	 transition:0.5s linear all;
+	 opacity:1;
+	 left: 0;
+}
+
+.record.ng-leave-active {
+	opacity:0;
+	left: 600px;
+}
+
+.record.ng-enter {
+	-webkit-transition:0.5s linear all;
+	 -moz-transition:0.5s linear all;
+	 -o-transition:0.5s linear all;
+	 transition:0.5s linear all;
+	 opacity:0;
+	 left: 600px;
+}
+
+.record.ng-enter-active {
+	opacity:1;
+	left: 0;
+}

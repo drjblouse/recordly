@@ -1,0 +1,14 @@
+<a ui-sref="newAlbum" class="btn-primary btn-lg nodecoration">Add New Album</a>
+<table class="table albumtable">
+    <tr>
+        <td><h3>Albums</h3></td>
+        <td></td>
+    </tr>
+    <tr ng-repeat="album in albums">
+        <td>{{album.title}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="viewAlbum({id:album.id})">View</a>
+            <a class="btn btn-danger"  ng-click="deleteAlbum(album)">Delete</a>
+        </td>
+    </tr>
+</table>

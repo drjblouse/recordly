@@ -3,6 +3,7 @@
 # pylint: disable=too-many-ancestors
 # pylint: disable=E1101
 import logging
+from django.contrib.auth.models import User
 from rest_framework import viewsets
 from rest_framework.decorators import permission_classes
 from rest_framework.permissions import AllowAny
@@ -11,24 +12,33 @@ from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 from rest_framework.exceptions import ParseError
 from rest_framework import status
-from django.contrib.auth.models import User
 from api.models import Artist, Album, Song
 from api.serializers import ArtistSerializer, \
-    AlbumSerializer, SongSerializer
+    AlbumSerializer, SongSerializer, UserSerializer
 
 
+@permission_classes((AllowAny, ))
+class UserViewSet(viewsets.ReadOnlyModelViewSet):
+    """ API endpoint for users. """
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
+@permission_classes((AllowAny, ))
 class ArtistViewset(viewsets.ModelViewSet):
     """ API endpoint for artists to be viewed and edited. """
     queryset = Artist.objects.all()
     serializer_class = ArtistSerializer
 
 
+@permission_classes((AllowAny, ))
 class AlbumViewset(viewsets.ModelViewSet):
     """ API endpoint for albums to be viewed and edited. """
     queryset = Album.objects.all()
     serializer_class = AlbumSerializer
 
 
+@permission_classes((AllowAny, ))
 class SongViewset(viewsets.ModelViewSet):
     """ API endpoint for songs to be viewed and edited. """
     queryset = Song.objects.all()

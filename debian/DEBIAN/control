@@ -1,9 +1,0 @@
-Package: corpseware-jacbot
-Version: 1.0.0-1
-Section: prod
-Priority: optional
-Architecture: all
-Depends: python3.4, python3-setuptools, python3-pip
-Maintainer: Corpseware, Inc.
-Description: Job robot management api.
- Jacbot REST api.
