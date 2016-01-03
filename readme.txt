@@ -21,3 +21,9 @@ Next Steps (Not necessarily in order):
 - Secure the backend and enforce the token based login which I disabled to get
 the client wired up correctly.
 - Change the database from Sqlite to a real DB.
+
+Steps for running server locally...
+1. Ensure Python 3 is installed
+2. Run pip install -r requirements.pip
+3. Run invoke build - This runs lint and tests with coverage. ~92%
+4. You can also run the server in a docker container via included docker file.
