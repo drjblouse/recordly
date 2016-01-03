@@ -20,3 +20,4 @@ Next Steps (Not necessarily in order):
 - Refactor the models and serializers to match the needs of the application.
 - Secure the backend and enforce the token based login which I disabled to get
 the client wired up correctly.
+- Change the database from Sqlite to a real DB.
